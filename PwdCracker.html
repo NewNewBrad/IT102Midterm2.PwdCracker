@@ -23,7 +23,7 @@
 <div id="wrapper">
 
 <form><p>Username:<input type="text" id="username" size="15" maxlenth="15"></p></form><br>
-<form><p>Password:<input type="text" id="myPwd" size="3" maxlength="3"></p></form><p> All lowercase, no special characters, 3 character limit.</p>
+<form><p>Password:<input type="text" id="myPwd" size="3" maxlength="3"></p></form><p> No special characters, 3 character limit.</p>
 
 <script type="text/javascript">
 	var crack = function crack(){
@@ -32,10 +32,13 @@
 	var pwd0 = array[0]
 	var pwd1 = array[1]
 	var pwd2 = array[2]
-	var charset = "0123456789abcdefghijklmnopqrstuvwxyz"
+	var charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz"
 	var charsetarray = charset.split("")
 
-	
+	//Pseudocode
+	//if charsetarray[0] == pwd1 CORRECT! move on to pwd2
+	//else charsetarray[++] == pwd1 check again
+	// does that ++ work within and array??	
 
 
 alert("Your password is: " + pwd1 + ".")
