@@ -23,13 +23,22 @@
 <div id="wrapper">
 
 <form><p>Username:<input type="text" id="username" size="15" maxlenth="15"></p></form><br>
-<form><p>Password:<input type="password" id="myPwd" size="3" maxlength="3"></p></form><br>
+<form><p>Password:<input type="text" id="myPwd" size="3" maxlength="3"></p></form><p> All lowercase, no special characters, 3 character limit.</p>
 
 <script type="text/javascript">
-	var password = document.getElementById("myPwd").value
 	var crack = function crack(){
+	var password = document.getElementById("myPwd").value
+	var pwdarray = password.split("")
+	var pwd0 = array[0]
+	var pwd1 = array[1]
+	var pwd2 = array[2]
+	var charset = "0123456789abcdefghijklmnopqrstuvwxyz"
+	var charsetarray = charset.split("")
 
-alert("Your password is: " + password + ".")
+	
+
+
+alert("Your password is: " + pwd1 + ".")
 
 }
 </script>
