@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Brad Jones - IT102 NSC</title>
+<title>Simple Password Cracker - Brad Jones - IT102 NSC</title>
 <style type="text/css">
 	*{
-		padding:0;
+		padding:10px;
 		margin:0;
 		text-align:center;
 	}
@@ -18,6 +18,7 @@
 		width:600px;
 		margin:20px auto;
 		background:#C9D0F2;
+		margin:20px;
 	}
 	form{
 		text-align:center;
@@ -25,12 +26,15 @@
 	button{
 		margin:15px;
 	}
+	h3{
+		font-size: .8em;
+	}
 </style>
 </head>
 <body>
 <div id="wrapper">
 
-<form><p>Password:<input type="text" id="myPwd" size="3" maxlength="3"></p></form><p> No special characters, 3 character limit.</p>
+<form><p>Password:<br><input type="text" id="myPwd" size="3" maxlength="3"></p></form><p> <h3>No special characters, 3 character limit. </h3></p><br><br><br><br>
 
 <script type="text/javascript">
 var crack = function crack(){
@@ -39,27 +43,44 @@ var crack = function crack(){
 	var pwd1 = myPwd.charAt(1);
 	var pwd2 = myPwd.charAt(2);
 
-	var pwdCode0 = myPwd.charCodeAt(0);
-	var pwdCode1 = myPwd.charCodeAt(1);
-	var pwdCode2 = myPwd.charCodeAt(2);
-	var pwdCrack0 = 0;
+//var pwdCode0 = myPwd.charCodeAt(0);
+//var pwdCode1 = myPwd.charCodeAt(1);
+//var pwdCode2 = myPwd.charCodeAt(2);
 
 
 	for (var i = 48; i < 123; i++){
-		console.log(String.fromCharCode(i));
+//console.log(String.fromCharCode(i));
 
 		if(i == pwd0.charCodeAt()){
-			alert("AHDLSAKJDALSKJDLAKSJDLSAKJD")
+			var crk0 = String.fromCharCode(i);
+			
+			for (j = 48; j < 123; j++){
+//console.log(String.fromCharCode(j));
+
+				if(j == pwd1.charCodeAt()){
+					var crk1 = String.fromCharCode(j);
+					
+					for(k = 48; k < 123; k++){
+//console.log(String.fromCharCode(k));
+					
+						if (k == pwd2.charCodeAt()){
+						var crk2 = String.fromCharCode(k);
+
+
+						alert("Your password is: " + crk0 + crk1 + crk2 + ".")
+						}
+					
+					}
+				
+				}
+			
+			}
+		
 		}
+	
 	}
-
-
-
-
-
-
-		alert("CharCode1: " + pwdCode0 + "  CharCode2: " + pwdCode1 + "  CharCode2: " + pwdCode2);
-		alert("Digit 1: " + pwd0 + "  Digit 2: " + pwd1 + "  Digit 3: " + pwd2);
+//alert("CharCode1: " + pwdCode0 + "  CharCode2: " + pwdCode1 + "  CharCode2: " + pwdCode2);
+//alert("Digit 1: " + pwd0 + "  Digit 2: " + pwd1 + "  Digit 3: " + pwd2);
 }
 
 </script>
