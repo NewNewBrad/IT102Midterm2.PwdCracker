@@ -34,7 +34,7 @@
 
 <body>
 <script type="text/javascript">
-	alert("Enter your username and password. This script will display your password.")
+	//alert("Enter your username and password. This script will display your password.")
 </script>
 <div id="wrapper">
 
@@ -44,22 +44,28 @@
 <script type="text/javascript">
 	var username = document.getElementById("username").value;
 	var myPwd = document.getElementById("myPwd").value;
-	var crack = function crack(){
-		var pwd0 = myPwd.charAt(0);
-		var pwd1 = myPwd.charAt(1);
-		var pwd2 = myPwd.charAt(2);
+	var pwd0 = myPwd.charAt(0);
+	var pwd1 = myPwd.charAt(1);
+	var pwd2 = myPwd.charAt(2);
 
+
+	var crack = function crack(){
 	//Pseudocode
 	//if charsetarray[0] == pwd1 CORRECT! move on to pwd2
 	//else charsetarray[++] == pwd1 check again
 	// does that ++ work within and array??	
 
-	alert("Digit 1: " + pwd0 + "  Digit 2: " + pwd1 + "  Digit 3: " + pwd2);
+
+	//alert("Digit 1: " + pwd0 + "  Digit 2: " + pwd1 + "  Digit 3: " + pwd2);
+	//alert("Digit 1: " + pwdASCII0 + "  Digit 2: " + pwdASCII1 + "  Digit 3: " + pwdASCII2);
+	document.getElementById("demo").innerHTML = document.write(myPwd);
 }
+
 </script>
 
 <form><button onclick="crack()">Crack!</button>
-</div>
+<br><br><p id="demo"></p>
+</div> <!-- end of Wrapper -->
 
 </body>
 </html>
