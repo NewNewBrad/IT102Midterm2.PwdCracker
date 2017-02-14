@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brad Jones - IT102 NSC</title>
+<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+		text-align:center;
+	}
+	body{
+		background:#6D79A8;
+		font-size:100%;
+	}
+	div#wrapper{
+		height:400px;
+		width:600px;
+		margin:20px auto;
+		background:#C9D0F2;
+	}
+	form{
+		text-align:center;
+	}
+	button{
+		margin:15px;
+	}
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+<form><p>Password:<input type="text" id="myPwd" size="3" maxlength="3"></p></form><p> No special characters, 3 character limit.</p>
+
+<script type="text/javascript">
+var crack = function crack(){
+	var myPwd = document.getElementById("myPwd").value;
+	var pwd0 = myPwd.charAt(0);
+	var pwd1 = myPwd.charAt(1);
+	var pwd2 = myPwd.charAt(2);
+
+	var pwdCode0 = myPwd.charCodeAt(0);
+	var pwdCode1 = myPwd.charCodeAt(1);
+	var pwdCode2 = myPwd.charCodeAt(2);
+	var pwdCrack0 = 0;
+
+
+	for (var i = 48; i < 123; i++){
+		console.log(String.fromCharCode(i));
+
+		if(i == pwd0.charCodeAt()){
+			alert("AHDLSAKJDALSKJDLAKSJDLSAKJD")
+		}
+	}
+
+
+
+
+
+
+		alert("CharCode1: " + pwdCode0 + "  CharCode2: " + pwdCode1 + "  CharCode2: " + pwdCode2);
+		alert("Digit 1: " + pwd0 + "  Digit 2: " + pwd1 + "  Digit 3: " + pwd2);
+}
+
+</script>
+
+<form><button onclick="crack()">Crack!</button>
+<br><br><p id="demo"></p>
+</div> <!-- end of Wrapper -->
+</body>
+</html> 
